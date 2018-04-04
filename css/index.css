@@ -1,3 +1,24 @@
 .advantages	{
 	font-size: 120%;
 }
+
+#secure_shopping {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("../img/secure_shopping.jpg");
+	background-size: cover;
+	margin-bottom: 0px;
+}
+
+.page-footer {
+	background-image: linear-gradient(to bottom, #ff6f607f 0%, #e53935ff 100%);
+}
+
+#secure_shopping p,
+#secure_shopping h1,
+#secure_shopping h3 {
+	color: white;
+	text-align: center;
+}
+
+.brand-logo	{
+	margin-left: 12px;
+}
