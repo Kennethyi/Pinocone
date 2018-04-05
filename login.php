@@ -55,11 +55,9 @@
             </div>
             </div> 
     
-                <button class="btn waves-effect waves-light #ffd600 yellow accent-4 text-black" type="submit" name="login_user"><font color="black">Log in </font>
-				</button>
+                <button class="btn waves-effect waves-light red lighten-1" type="submit" name="login_user">Log in</button>
                 
-                <button class="btn waves-effect waves-light #ffd600 yellow accent-4" type="button" onclick="location.href='register.php';" value="Go to Register"><font color="black">Sign Up </font>
-                </button>
+                <button class="btn waves-effect waves-light red lighten-1" type="button" onclick="location.href='register.php';" value="Go to Register">Sign Up</button>
             </form>
         </div>
         </div>

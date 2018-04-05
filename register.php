@@ -43,8 +43,8 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                <label for="username">Username</label>
-                <input id="username" type="text" class="validate" name="username">
+					<input id="username" type="text" class="validate" name="username">
+					<label for="username">Username</label>
                 </div>
             </div>
 
@@ -93,11 +93,9 @@
           </div>
 
         
-            <p><a href="login.php">Already a member?</a></p>
+            <a href="login.php"><p class="red-text text-lighten-1">Already a member?</p></a>
          
-            <button class="btn waves-effect waves-light  #ffd600 yellow accent-4" type="submit" name="reg_user">
-            <font color="black"> Register</font>
-            </button>
+            <button class="btn waves-effect waves-light red lighten-1" type="submit" name="reg_user">Register</button>
             
     </form>
         

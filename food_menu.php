@@ -12,13 +12,17 @@
 		<!-- AngularJS -->
 		<script src="js/angular.js"></script>
 		
-		<!-- AngularJS -->
-		<script src="js/food_menu.js"></script>
-		
 		<!-- Material icons -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
+		<!-- Masonry Grid Layout Lib -->
+		<script src="js/masonry.js"></script>
+		
+		<!-- Food Menu CSS -->
 		<link rel="stylesheet" href="css/food_menu.css">
+		
+		<!-- Food Package Data -->
+		<script src="js/food_package.js"></script>
 	</head>
 	
 	<body data-ng-app="food_menu">
@@ -45,18 +49,23 @@
 		
 			<div data-ng-controller="food_ctrl" class="row">
 			
-				<div data-ng-repeat="card in food_list" class="col s3">
-					<a href="#">
-						<div class="card small">
-							<div class="card-image">
-								<img src="img/food/food{{$index}}.jpg">
-								<span class="col s12 card-title">{{card.food_name}}</span>
-							</div>
-							<div class="card-content">
-								<p>{{card.desc}}</p>
-							</div>
+				<div data-ng-repeat="package in food_package" class="col s4">
+					<div class="card large waves-effect waves-block waves-light">
+						<div class="card-image">
+							<img class="activator" src="img/food/fp{{$index + 1}}.jpg">
 						</div>
-					</a>
+						<div class="card-content">
+							<span class="card-title activator">Food Package {{$index + 1}}<i class="material-icons right">more_vert</i></span>
+							<p>{{package.desc}}</p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Food Package {{$index + 1}}<i class="material-icons right">close</i></span>
+							<p>{{package.info}}</p>
+						</div>
+						<div class="card-action">
+							<a href="#">BUY</a>
+						</div>
+					</div>
 				</div>
 				
 			</div>

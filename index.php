@@ -15,13 +15,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home</title>
-		<!-- Compiled and minified CSS -->
+		<!-- Materialize CSS -->
 		<link rel="stylesheet" href="css/materialize.css">
 
-		<!-- Compiled and minified JavaScript -->
+		<!-- Materialize JavaScript -->
 		<script src="js/materialize.js"></script>
 		
+		<!-- Material icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Index CSS -->
 		<link rel="stylesheet" href="css/index.css">
+
 	</head>
 	
 	<body>
@@ -33,7 +38,7 @@
 					<ul id="nav" class="right">
 						<li><a href="food_menu.php">Food Menu</a></li>
 						<li><a href="#">About Us</a></li>
-						<li><a href="#">Login</a></li>
+						<li><a href="<?php include 'includes/index_user_nav_tab.php'?>
 					</ul>
 				</div>
 			</nav>
