@@ -14,12 +14,6 @@
 		<!-- Materialize JavaScript -->
 		<script src="js/materialize.js"></script>
 		
-		<!-- AngularJS -->
-		<script src="js/angular.js"></script>
-		
-		<!-- AngularJS -->
-		<script src="js/food_menu.js"></script>
-		
 		<!-- Material icons -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
@@ -30,16 +24,15 @@
         
        
         <nav>
-		  <div class="nav-wrapper z-depth-3">
-          <a href="index.php" class="brand-logo">Pinocone</a>
-		  </div>
+			<div class="nav-wrapper">
+				<a href="index.php" class="brand-logo">Pinocone</a>
+			</div>
         </nav>
-        
-        
+
 		<br />
         <br />
 		<br />
-		
+
         <div class="container" id="login_container">
         <div class="card-panel">
             
@@ -75,7 +68,6 @@
 		<br />
 		<br />
 		
-        
         <footer class="page-footer z-depth-3" id="footer_login">
 			<div class="container">
 				<div class="row">
