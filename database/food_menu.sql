@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2018 at 09:41 AM
+-- Generation Time: Apr 05, 2018 at 02:16 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `food_menu`
+-- Database: `pinocone`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +36,6 @@ CREATE TABLE `food_menu` (
 --
 
 INSERT INTO `food_menu` (`food_name`, `description`) VALUES
-('Food Menu 1', 'Spaghetti made from whole grain wheat with peas.'),
 ('Food Menu 1', 'Spaghetti made from whole grain wheat with peas.'),
 ('Food Menu 2', 'Fresh strawberries with cucumber for dessert.'),
 ('Food Menu 3', 'Beef meatball made from real beef with no crushed bone.'),
