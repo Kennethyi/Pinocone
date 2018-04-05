@@ -22,3 +22,13 @@
 .brand-logo	{
 	margin-left: 12px;
 }
+
+#login_container{
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+}
+
+#footer_login{
+     flex: 1 0 auto;
+}
