@@ -114,7 +114,7 @@
 						<h5 class="white-text">Links</h5>
 						<ul>
 							<li><a class="grey-text text-lighten-3" href="about_us.php">About Us</a></li>
-							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact</a></li>
+							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact Us</a></li>
 						</ul>
 					</div>
 				</div>
