@@ -43,7 +43,7 @@
 					<a href="./index.php" class="brand-logo">Pinocone</a>
 					<ul id="nav" class="right">
 						<li><a href="food_menu.php">Food Menu</a></li>
-						<li><a href="localhost/Pinocone/about_us.php">About Us</a></li>
+						<li><a href="about_us.php">About Us</a></li>
 						<li><a href="#">Login</a></li>
 					</ul>
 				</div>
@@ -81,8 +81,8 @@
 					<div class="col l4 offset-l2 s12">
 						<h5 class="white-text">Links</h5>
 						<ul>
-							<li><a class="grey-text text-lighten-3" href="localhost/Pinocone/about_us.php">About Us</a></li>
-							<li><a class="grey-text text-lighten-3" href="localhost/Pinocone/contact_us.php">Contact</a></li>
+							<li><a class="grey-text text-lighten-3" href="about_us.php">About Us</a></li>
+							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact Us</a></li>
 						</ul>
 					</div>
 				</div>
