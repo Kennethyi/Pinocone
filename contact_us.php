@@ -1,4 +1,15 @@
-
+<?php
+	session_start();
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: login.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +17,17 @@
 <meta charset="utf-8"/>
 <meta name="description" content="contacts of the company"/>
 
-<!-- Materialize CSS -->
+		<!-- Materialize CSS -->
 		<link rel="stylesheet" href="css/materialize.css">
 
 		<!-- Materialize JavaScript -->
 		<script src="js/materialize.js"></script>
 		
+		<!-- Material icons -->
+		<link href="css/material-icon.css" rel="stylesheet">
+		
 		<!-- AngularJS -->
 		<script src="js/angular.js"></script>
-		
-		<!-- AngularJS -->
-		<script src="js/food_menu.js"></script>
-
-<!-- Material icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		
-		<link rel="stylesheet" href="css/food_menu.css">
 
 </head>
 <body>
@@ -33,7 +39,7 @@
 					<ul id="nav" class="right">
 						<li><a href="food_menu.php">Food Menu</a></li>
 						<li><a href="about_us.php">About Us</a></li>
-						<li><a href="#">Login</a></li>
+						<li><a href="<?php include 'includes/index_user_nav_tab.php'?>
 					</ul>
 				</div>
 			</nav>

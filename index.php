@@ -22,7 +22,7 @@
 		<script src="js/materialize.js"></script>
 		
 		<!-- Material icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/material-icon.css" rel="stylesheet">
 		
 		<!-- Index CSS -->
 		<link rel="stylesheet" href="css/index.css">
@@ -38,7 +38,7 @@
 					<ul id="nav" class="right">
 						<li><a href="food_menu.php">Food Menu</a></li>
 						<li><a href="about_us.php">About Us</a></li>
-						<li><a href="<?php include 'includes/index_user_nav_tab.php'?>
+						<li><a href="<?php include 'includes/user_nav_tab.php'?>
 					</ul>
 				</div>
 			</nav>
@@ -131,7 +131,7 @@
 						<h5 class="white-text">Links</h5>
 						<ul>
 							<li><a class="grey-text text-lighten-3" href="about_us.php">About Us</a></li>
-							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact Us</a></li>
+							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -139,7 +139,7 @@
 			<div class="footer-copyright">
 				<div class="container">
 				&copy; 2018 Pinocone
-				<a class="grey-text text-lighten-4 right" href="#!">Pinocone</a>
+				<a class="grey-text text-lighten-4 right" href="#">Pinocone</a>
 				</div>
 			</div>
 		</footer>

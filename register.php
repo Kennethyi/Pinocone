@@ -22,7 +22,7 @@
 		<script src="js/food_menu.js"></script>
 		
 		<!-- Material icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/material-icon.css" rel="stylesheet">
 		
 		<link rel="stylesheet" href="css/index.css">
     </head>
@@ -114,7 +114,7 @@
 						<h5 class="white-text">Links</h5>
 						<ul>
 							<li><a class="grey-text text-lighten-3" href="about_us.php">About Us</a></li>
-							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact Us</a></li>
+							<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>

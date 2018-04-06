@@ -38,3 +38,18 @@ p {
 .card .card-content .card-title i {
     line-height: 22px;
 }
+
+#theloader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#wrapper {
+	display: none;
+}
+
+[data-ng-cloak], .data-ng-cloak {
+	display: none !important;
+}

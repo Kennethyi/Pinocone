@@ -8,7 +8,9 @@
 		if ($outp != "") {$outp .= ",";}
 		$outp .= '{"food_package":"'	. $rs["food_package"]		. '",';
 		$outp .= '"desc":"'				. $rs["description"]		. '",';
-		$outp .= '"info":"'				. $rs["info"]				. '"}';
+		$outp .= '"info":"'				. $rs["info"]				. '",';
+		$outp .= '"price":"'			. $rs["price"]				. '",';
+		$outp .= '"imgindex":'			. $rs["imgindex"]			. '}';
 	}
 	$outp = '{"food_package":['.$outp.']}';
 	$conn->close();
