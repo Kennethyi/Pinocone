@@ -78,4 +78,48 @@
 		}
 	}
 
+    //UPDATE PROFILE
+    if (isset($_POST['updateprofile'])) {
+	// receive all input values from the form
+		$username = mysqli_real_escape_string($db, $_POST['username']);
+        $first_name = mysqli_real_escape_string($db, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($db,
+        $_POST['last_name']);
+	    $email =mysqli_real_escape_string($db, 
+        $_POST['email']);
+	    $password = mysqli_real_escape_string($db, $_POST['password']);
+        $phone_number= mysqli_real_escape_string($db, $_POST['phone_number']);
+        $address = mysqli_real_escape_string($db,
+        $_POST['address']);
+        
+        // form validation: ensure that the form is correctly filled
+		if (empty($username)) { array_push($errors, "Username is required"); }
+        if (empty($first_name)&&($last_name)) { array_push($errors, "Name is required"); }
+		if (empty($email)) { array_push($errors, "Email is required"); }
+		if (empty($password)) { array_push($errors, "Password is required"); }
+        if (empty($phone_number)) { array_push($errors, "Phone Number is required"); }
+
+
+
+		// register user if there are no errors in the form
+		if (count($errors) == 0) {
+			$password = md5($password_1);//encrypt the password before saving in the database
+			//$update = "UPDATE INTO user (username, first_name, last_name, email, password, phone_number, address) 
+					 // VALUES('$username', '$first_name', '$last_name', '$email', '$password', '$phnum', '$address')";
+            $update = "UPDATE user SET username = '$username', 
+                first_name= '$first_name', 
+                last_name= '$last_name', 
+                email = '$email', 
+                password='$password', 
+                phone_number='$phone_number', 
+                address= '$address' WHERE user_id = 1";
+			
+            $result = mysqli_query($db, $update);
+            if ($result) {
+			$_SESSION['username'] = $username;
+			$_SESSION['success'] = "You are have edit your profile";
+			header('location: profile.php');
+            }
+		}
+    }
 ?>

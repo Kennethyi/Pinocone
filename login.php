@@ -3,9 +3,6 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="Login page" />
-        <meta name="keywords" content="HTML, log,in, Development project 2," />
-
         <title>Login</title>
 		
 		<!-- Materialize CSS -->
@@ -14,10 +11,17 @@
 		<!-- Materialize JavaScript -->
 		<script src="js/materialize.js"></script>
 		
+		<!-- AngularJS -->
+		<script src="js/angular.js"></script>
+		
+		<!-- JQuery -->
+		<script src="js/jquery.js"></script>
+		
 		<!-- Material icons -->
 		<link href="css/material-icon.css" rel="stylesheet">
 		
-		<link rel="stylesheet" href="css/index.css">
+        <!-- Login CSS  -->
+		<link rel="stylesheet" href="css/login.css">
     </head>
     
     <body>
@@ -29,28 +33,26 @@
 			</div>
         </nav>
 
-		<br />
-        <br />
-		<br />
-
         <div class="container" id="login_container">
         <div class="card-panel">
             
             <form class="col s12" method="post" action="login.php">
                 
-            <?php include('includes\errors.php'); ?>
+           <?php include('includes\errors.php'); ?>
                 
             <div class="row">
-                <div class="input-field col s12">
-                <label for="user">Username</label>
-                <input type="text" id="user"  placeholder="Enter Username" name="username">
+                <div class="input-field col s12 ">
+                <label for="user" class="word">Username</label>
+                <input type="text" id="user"  placeholder="Enter Username" name="username"
+                value="<?php if (isset($_POST["username"])) echo $_POST["username"]; ?>">
                 </div>
             </div>
             
             <div class="row">
             <div class="input-field col s12">
               <label for="password">Password</label>
-              <input type="password" id="password" placeholder="Enter Password" name="password">
+              <input type="password" id="password" placeholder="Enter Password" name="password"
+              value="<?php if (isset($_POST["password"])) echo $_POST["password"]; ?>">
     
             </div>
             </div> 
@@ -62,9 +64,6 @@
         </div>
         </div>
 		
-		<br />
-		<br />
-		<br />
 		
         <footer class="page-footer z-depth-3" id="footer_login">
 			<div class="container">

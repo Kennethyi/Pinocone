@@ -3,9 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="Login page" />
-        <meta name="keywords" content="HTML, log,in, Development project 2," />
-        <meta name="author" content="#"/>
+
         
         <title>Register</title>
 		
@@ -24,7 +22,8 @@
 		<!-- Material icons -->
 		<link href="css/material-icon.css" rel="stylesheet">
 		
-		<link rel="stylesheet" href="css/index.css">
+        <!-- Login CSS  -->
+		<link rel="stylesheet" href="css/login.css">
     </head>
     
     <body>
@@ -34,7 +33,7 @@
 		  </div>
         </nav>
         <br/>
-        <div class="container">
+        <div class="container" id="login_container">
         <div class="card-panel">
         <div class="row">
         <form class="col s12" method="post" action="register.php">
@@ -79,7 +78,7 @@
             </div>
 
             <div class="input-field col s5">
-              <input id="phnum" type="number" class="validate" name="phnum">
+              <input id="phnum" type="text" class="validate" name="phnum">
               <label for="phnum">Phone number</label>
             </div>
           </div>
@@ -103,7 +102,7 @@
     </div>
     </div>
         
-        <footer class="page-footer z-depth-3">
+        <footer class="page-footer z-depth-3" id="footer_login">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">

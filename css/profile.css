@@ -1,0 +1,20 @@
+.brand-logo,
+#first_breadcrumb {
+	margin-left: 12px;
+}
+
+.breadcrumb:before {
+	color: #ef5350;
+	text-align: center;
+}
+
+#profile_container{
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+#profile_footer{
+     flex: 1 0 auto;
+}
