@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2018 at 08:17 PM
+-- Generation Time: Apr 14, 2018 at 02:25 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -34,7 +34,9 @@ CREATE TABLE `orders` (
   `address2` text NOT NULL,
   `city` text NOT NULL,
   `statee` text NOT NULL,
-  `postcode` mediumint(9) NOT NULL
+  `postcode` mediumint(9) NOT NULL,
+  `foodpackage` text NOT NULL,
+  `orderid` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

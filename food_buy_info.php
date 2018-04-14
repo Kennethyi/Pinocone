@@ -155,7 +155,7 @@
 			</div>
 			<!-- Credit Card Form Structure -->
 			<div style="overflow:visible;" id="modal1" class="modal">
-				<div class="modal-content">
+				<div id="modalbox" class="modal-content">
 					<h4 class="center">Confirm Purchase</h4>
 					<form id="creditcard" class="col s12">
 						<div style="margin-left:0px; margin-right:0px;" class="row">
@@ -219,7 +219,7 @@
 				</div>
 				<div class="modal-footer center-align">
 					<div class="center-align">
-						<button style="width:95%;" class="modal-action modal-close btn waves-effect waves-light red lighten-1 white-text modal-trigger">Confirm
+						<button id="save_order" style="width:95%;" class="modal-action modal-close btn waves-effect waves-light red lighten-1 white-text">Confirm
 						</button>
 					</div>
 				</div>

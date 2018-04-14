@@ -7,61 +7,101 @@ var instance1 = M.FormSelect.init(elem1);
 var elem1 = document.querySelector('#year');
 var instance2 = M.FormSelect.init(elem1);
 
+var username = "";
+var foodpackage = "";
+var first_name = "";
+var last_name = "";
+var address1 = "";
+var address2 = "";
+var city = "";
+var statee = "";
+var postcode = "";
+
 $(function() {
-	var jusername;
+	
+	var jusername = "";
 	$.ajax({
 			url:"includes/getusersession.php",
 			success: function(data){
 				jusername = data;
 			}
 	});
+	
+	var jfoodpackage = "";
+	$.ajax({
+			url:"includes/getfoodpackage.php",
+			success: function(data){
+				jfoodpackage = data;
+			}
+	});
+	
 	$("#save_details").click(function() {
 		var errstr = "";
-		var username = jusername;
-		var first_name = $("#first_name").val();
+		
+		username = jusername;
+		foodpackage = "Food Package " + jfoodpackage;
+		
+		first_name = $("#first_name").val();
 			if(first_name == "")
 				errstr += "First name cannot be empty! ";
-		var last_name = $("#last_name").val();
+		last_name = $("#last_name").val();
 			if(last_name == "")
 				errstr += "Last name cannot be empty! ";
-		var address1 = $("#address1").val();
+		address1 = $("#address1").val();
 			if(address1 == "")
 				errstr += "Address 1 cannot be empty! ";
-		var address2 = $("#address2").val();
+		address2 = $("#address2").val();
 			if(address2 == "")
 				errstr += "Address 2 cannot be empty! ";
-		var city = $("#city").val();
+		city = $("#city").val();
 			if(city == "")
 				errstr += "City cannot be empty! ";
-		var statee = $("#statee").val();
+		statee = $("#statee").val();
 			if(statee == "")
 				errstr += "State cannot be empty! ";
-		var postcode = $("#postcode").val();
+		postcode = $("#postcode").val();
 			if(postcode == "")
 				errstr += "Postcode cannot be empty! ";
-		
+			
 		if(errstr != "")
 			alert(errstr);
 		else {
-			var dataString = 
-			'username=' + username +
-			'&first_name=' + first_name + 
-			'&last_name=' + last_name + 
-			'&address1=' + address1 + 
-			'&address2=' + address2 + 
-			'&city=' + city + 
-			'&statee=' + statee + 
-			'&postcode=' + postcode;
-			//alert (dataString);return false;
-			$.ajax({
-				type: "post",
-				url: "includes/food_buy_selection_details.php",
-				data: dataString,
-				success: function(data) {
-					instance.open();
-				}
-			});
-			return false;
+			instance.open();
 		}
 	});
+	
+	$("#save_order").click(function() {
+		var orderid = (new Date).getTime();
+		
+		var dataString = 
+		'username=' + username + 
+		'&first_name=' + first_name + 
+		'&last_name=' + last_name + 
+		'&address1=' + address1 + 
+		'&address2=' + address2 + 
+		'&city=' + city + 
+		'&statee=' + statee + 
+		'&postcode=' + postcode + 
+		'&foodpackage=' + foodpackage + 
+		'&orderid=' + orderid;
+		
+		//alert (dataString);return false;
+		
+		$.ajax({
+			type: "post",
+			url: "includes/food_buy_selection_details.php",
+			data: dataString,
+			success: function(data) {
+			}
+		});
+		
+		instance.close();
+		
+		alert("Your order has been successfuly added!");
+		
+		window.location.href = 'food_menu.php';
+		
+		return false;
+	});
+	
 });
