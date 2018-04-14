@@ -1,31 +1,5 @@
 <?php include('includes\server.php') ?>
 
-<?php
-if (isset($_POST['updateprofile'])) {
-	$username = $_POST['username'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-    $phone_number= $_POST['phone_number'];
-    $address = $_POST['address'];
-	
-	$update = "UPDATE user SET username = '$username', 
-                first_name= '$first_name', 
-                last_name= '$last_name', 
-                email = '$email', 
-                password='$password', 
-                phone_number='$phone_number', 
-                address= '$address' WHERE user_id = 1";
-    
-	$result = mysqli_query($db, $update);
-	if ($result) {
-		header('Location: profile.php');
-	}
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
