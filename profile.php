@@ -27,6 +27,8 @@
 		<link rel="stylesheet" href="css/profile.css">
 	</head>
     
+    
+    <!--f($result = $db->query("SELECT last_name FROM user WHERE username= $_SESSION['username']")) -->
     <body>
         <nav>
 		  <div class="nav-wrapper z-depth-3">
@@ -51,18 +53,21 @@
                     <div class="showfield col s12" id="profileusername">
                      Username:
                      <?php
-                          if($result = $db->query("SELECT username FROM user WHERE user_id = 1")) 
-                        {
-                            if($count = $result->num_rows) 
-                            {
-                                while 
-                                    ($row = $result->fetch_object())
-                                    {
-                                    echo $row->username;
-                                    }
-                            }
-				        }  
- 
+                       if(isset($_SESSION['username'])){
+                            echo $_SESSION['username'];
+                       // if($result = $db->query("SELECT username FROM user ")) 
+                       // {
+                           
+                         //   if($count = $result->num_rows) 
+                        //    {
+                          //     while 
+                          //         ($row = $result->fetch_object())
+                          //        {
+                         //         echo $row->username;
+                         //       }
+                      //     }
+				       // }  
+                        }
 			         ?>
                     </div>
                      </div>
@@ -71,23 +76,28 @@
                     <div class="showfield col s6" id="profilefname">
                     First name:
                      <?php
-				        if($result = $db->query("SELECT first_name FROM user WHERE user_id = 1")) 
-                        {
-                            if($count = $result->num_rows) 
-                            {
-                                while ($row = $result->fetch_object())
-                                    {
-                                    echo $row->first_name;
-                                    }
-                            }
-				        }
+                        if(isset($_SESSION['username'])){
+                            
+                            echo first_name;
+				        //if($result = $db->query("SELECT first_name FROM user")) 
+                        //{
+                            //if($count = $result->num_rows) 
+                          //  {
+                             //   while ($row = $result->fetch_object())
+                                   // {
+                                //    echo $row->first_name;
+                                 //   }
+                            //}
+				        //}
+                        }
 			         ?>
                     </div>
                     
                     <div class="showfield col s6" id="profilelname">
                     Last name:
                      <?php
-				        if($result = $db->query("SELECT last_name FROM user WHERE user_id = 1")) 
+                       if(isset($_SESSION['username'])){
+				        if($result = $db->query("SELECT last_name FROM user")) 
                         {
                             if($count = $result->num_rows) 
                             {
@@ -97,6 +107,7 @@
                                     }
                             }
 				        }
+                        }
 			         ?>
                     </div>
                      </div>
@@ -105,7 +116,8 @@
                     <div class="showfield col s12" id="profileuseremail">
                     Email:
                      <?php
-				        if($result = $db->query("SELECT email FROM user WHERE user_id = 1")) 
+                       if(isset($_SESSION['username'])){
+				        if($result = $db->query("SELECT email FROM user")) 
                         {
                             if($count = $result->num_rows) 
                             {
@@ -115,6 +127,7 @@
                                     }
                             }
 				        }
+                        }
 			         ?>
                     </div>
                      </div>
@@ -123,7 +136,8 @@
                     <div class="showfield col s12" id="profileuserphone">
                      Phone number:
                      <?php
-				        if($result = $db->query("SELECT phone_number FROM user WHERE user_id = 1")) 
+                       if(isset($_SESSION['username'])){
+				        if($result = $db->query("SELECT phone_number FROM user")) 
                         {
                             if($count = $result->num_rows) 
                             {
@@ -133,6 +147,7 @@
                                     }
                             }
 				        }
+                        }
 			         ?>
                     </div>
                      </div>
@@ -141,7 +156,8 @@
                     <div class="showfield col s12" id="profileuseraddress">
                      User Address:
                      <?php
-				        if($result = $db->query("SELECT address FROM user WHERE user_id = 1")) 
+                        if(isset($_SESSION['username'])){
+				        if($result = $db->query("SELECT address FROM user")) 
                         {
                             if($count = $result->num_rows) 
                             {
@@ -151,6 +167,7 @@
                                     }
                             }
 				        }
+                        }
 			         ?>
                     </div>
                      </div>
@@ -185,3 +202,4 @@
 			</footer>
 	</body>
 </html>
+                 
