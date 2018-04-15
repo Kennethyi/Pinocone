@@ -1,4 +1,21 @@
-<?php include('includes\server.php')?>
+<?php 
+session_start();
+$db = mysqli_connect('localhost', 'root', '', 'pinocone');
+$cuser = $_SESSION['username'];
+    //USER QUERY FOR GETTING USER LOGIN INFORMATION FOR PROFILE DIAPLAY
+    $sql = "SELECT * FROM user WHERE username = '" . $_SESSION['username'] . "'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+//        while($row = mysql_fetch_array($userquery, MYSQL_ASSOC)){
+//            $username = $row['username'];
+//            $first_name = $row['first_name'];
+//            $last_name = $row['last_name'];
+//            $email = $row['email'];
+//            $phone_number = $row['phone_number'];
+//            $address = $row['address'];
+//        }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +95,7 @@
                      <?php
                         if(isset($_SESSION['username'])){
                             
-                            echo first_name;
+                            echo $row['first_name'];
 				        //if($result = $db->query("SELECT first_name FROM user")) 
                         //{
                             //if($count = $result->num_rows) 
@@ -96,18 +113,19 @@
                     <div class="showfield col s6" id="profilelname">
                     Last name:
                      <?php
-                       if(isset($_SESSION['username'])){
-				        if($result = $db->query("SELECT last_name FROM user")) 
-                        {
-                            if($count = $result->num_rows) 
-                            {
-                                while ($row = $result->fetch_object())
-                                    {
-                                    echo $row->last_name;
-                                    }
-                            }
-				        }
-                        }
+                  echo $row['last_name'];
+//                       if(isset($_SESSION['username'])){
+//				        if($result = $db->query("SELECT last_name FROM user")) 
+//                        {
+//                            if($count = $result->num_rows) 
+//                            {
+//                                while ($row = $result->fetch_object())
+//                                    {
+//                                    echo $row->last_name;
+//                                    }
+//                            }
+//				        }
+//                        }
 			         ?>
                     </div>
                      </div>
@@ -116,18 +134,19 @@
                     <div class="showfield col s12" id="profileuseremail">
                     Email:
                      <?php
-                       if(isset($_SESSION['username'])){
-				        if($result = $db->query("SELECT email FROM user")) 
-                        {
-                            if($count = $result->num_rows) 
-                            {
-                                while ($row = $result->fetch_object())
-                                    {
-                                    echo $row->email;
-                                    }
-                            }
-				        }
-                        }
+                  echo $row['email'];
+//                       if(isset($_SESSION['username'])){
+//				        if($result = $db->query("SELECT email FROM user")) 
+//                        {
+//                            if($count = $result->num_rows) 
+//                            {
+//                                while ($row = $result->fetch_object())
+//                                    {
+//                                    echo $row->email;
+//                                    }
+//                            }
+//				        }
+//                        }
 			         ?>
                     </div>
                      </div>
@@ -136,18 +155,19 @@
                     <div class="showfield col s12" id="profileuserphone">
                      Phone number:
                      <?php
-                       if(isset($_SESSION['username'])){
-				        if($result = $db->query("SELECT phone_number FROM user")) 
-                        {
-                            if($count = $result->num_rows) 
-                            {
-                                while ($row = $result->fetch_object())
-                                    {
-                                    echo $row->phone_number;
-                                    }
-                            }
-				        }
-                        }
+                  echo $row['phone_number'];
+//                       if(isset($_SESSION['username'])){
+//				        if($result = $db->query("SELECT phone_number FROM user")) 
+//                        {
+//                            if($count = $result->num_rows) 
+//                            {
+//                                while ($row = $result->fetch_object())
+//                                    {
+//                                    echo $row->phone_number;
+//                                    }
+//                            }
+//				        }
+//                        }
 			         ?>
                     </div>
                      </div>
@@ -156,18 +176,19 @@
                     <div class="showfield col s12" id="profileuseraddress">
                      User Address:
                      <?php
-                        if(isset($_SESSION['username'])){
-				        if($result = $db->query("SELECT address FROM user")) 
-                        {
-                            if($count = $result->num_rows) 
-                            {
-                                while ($row = $result->fetch_object())
-                                    {
-                                    echo $row->address;
-                                    }
-                            }
-				        }
-                        }
+                  echo $row['address'];
+//                        if(isset($_SESSION['username'])){
+//				        if($result = $db->query("SELECT address FROM user")) 
+//                        {
+//                            if($count = $result->num_rows) 
+//                            {
+//                                while ($row = $result->fetch_object())
+//                                    {
+//                                    echo $row->address;
+//                                    }
+//                            }
+//				        }
+//                        }
 			         ?>
                     </div>
                      </div>

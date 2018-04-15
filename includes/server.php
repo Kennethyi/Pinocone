@@ -70,6 +70,7 @@
 
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
+                $_SESSION['first_name'] = $first_name;
 				$_SESSION['success'] = "You are now logged in";
 				header('location: index.php');
 			}else {
