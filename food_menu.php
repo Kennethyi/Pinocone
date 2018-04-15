@@ -76,32 +76,11 @@
 				</nav>
 			</header>
 			
-			<div id="content" class="container">
-			
-				<div data-ng-controller="food_ctrl" class="row">
-				
-					<div data-ng-repeat="package in food_package" class="col s4">
-						<div class="card large waves-effect waves-block waves-light">
-							<div class="card-image">
-								<img src="img/food/fp{{$index + 1}}.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator">Food Package {{$index + 1}}<i class="material-icons right">more_vert</i></span>
-								<p>{{package.desc}}</p>
-							</div>
-							<div class="card-reveal">
-								<span class="card-title grey-text text-darken-4">Food Package {{$index + 1}}<i class="material-icons right">close</i></span>
-								<p>{{package.info}}</p>
-							</div>
-							<div class="card-action">
-								<a href="food_buy_info.php?food-package='{{$index + 1}}'">BUY</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			
-			</div>
+			<!--Food Category- Warm and Cold-->
+                                <img class="responsive-img" src="img/food/cool.jpg">
+                                <img class="responsive-img" src="img/food/wam.jpg">
+                                
+
 			
 			<footer class="page-footer z-depth-3">
 				<div class="container">
