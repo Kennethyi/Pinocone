@@ -44,8 +44,6 @@ $cuser = $_SESSION['username'];
 		<link rel="stylesheet" href="css/profile.css">
 	</head>
     
-    
-    <!--f($result = $db->query("SELECT last_name FROM user WHERE username= $_SESSION['username']")) -->
     <body>
         <nav>
 		  <div class="nav-wrapper z-depth-3">
@@ -72,18 +70,6 @@ $cuser = $_SESSION['username'];
                      <?php
                        if(isset($_SESSION['username'])){
                             echo $_SESSION['username'];
-                       // if($result = $db->query("SELECT username FROM user ")) 
-                       // {
-                           
-                         //   if($count = $result->num_rows) 
-                        //    {
-                          //     while 
-                          //         ($row = $result->fetch_object())
-                          //        {
-                         //         echo $row->username;
-                         //       }
-                      //     }
-				       // }  
                         }
 			         ?>
                     </div>
@@ -96,16 +82,6 @@ $cuser = $_SESSION['username'];
                         if(isset($_SESSION['username'])){
                             
                             echo $row['first_name'];
-				        //if($result = $db->query("SELECT first_name FROM user")) 
-                        //{
-                            //if($count = $result->num_rows) 
-                          //  {
-                             //   while ($row = $result->fetch_object())
-                                   // {
-                                //    echo $row->first_name;
-                                 //   }
-                            //}
-				        //}
                         }
 			         ?>
                     </div>
@@ -113,19 +89,8 @@ $cuser = $_SESSION['username'];
                     <div class="showfield col s6" id="profilelname">
                     Last name:
                      <?php
-                  echo $row['last_name'];
-//                       if(isset($_SESSION['username'])){
-//				        if($result = $db->query("SELECT last_name FROM user")) 
-//                        {
-//                            if($count = $result->num_rows) 
-//                            {
-//                                while ($row = $result->fetch_object())
-//                                    {
-//                                    echo $row->last_name;
-//                                    }
-//                            }
-//				        }
-//                        }
+                        echo $row['last_name'];
+
 			         ?>
                     </div>
                      </div>
@@ -134,19 +99,8 @@ $cuser = $_SESSION['username'];
                     <div class="showfield col s12" id="profileuseremail">
                     Email:
                      <?php
-                  echo $row['email'];
-//                       if(isset($_SESSION['username'])){
-//				        if($result = $db->query("SELECT email FROM user")) 
-//                        {
-//                            if($count = $result->num_rows) 
-//                            {
-//                                while ($row = $result->fetch_object())
-//                                    {
-//                                    echo $row->email;
-//                                    }
-//                            }
-//				        }
-//                        }
+                        echo $row['email'];
+
 			         ?>
                     </div>
                      </div>
@@ -155,19 +109,8 @@ $cuser = $_SESSION['username'];
                     <div class="showfield col s12" id="profileuserphone">
                      Phone number:
                      <?php
-                  echo $row['phone_number'];
-//                       if(isset($_SESSION['username'])){
-//				        if($result = $db->query("SELECT phone_number FROM user")) 
-//                        {
-//                            if($count = $result->num_rows) 
-//                            {
-//                                while ($row = $result->fetch_object())
-//                                    {
-//                                    echo $row->phone_number;
-//                                    }
-//                            }
-//				        }
-//                        }
+                        echo $row['phone_number'];
+
 			         ?>
                     </div>
                      </div>
@@ -176,19 +119,8 @@ $cuser = $_SESSION['username'];
                     <div class="showfield col s12" id="profileuseraddress">
                      User Address:
                      <?php
-                  echo $row['address'];
-//                        if(isset($_SESSION['username'])){
-//				        if($result = $db->query("SELECT address FROM user")) 
-//                        {
-//                            if($count = $result->num_rows) 
-//                            {
-//                                while ($row = $result->fetch_object())
-//                                    {
-//                                    echo $row->address;
-//                                    }
-//                            }
-//				        }
-//                        }
+                        echo $row['address'];
+
 			         ?>
                     </div>
                      </div>
