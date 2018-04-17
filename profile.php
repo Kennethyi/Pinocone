@@ -6,15 +6,6 @@ $cuser = $_SESSION['username'];
     $sql = "SELECT * FROM user WHERE username = '" . $_SESSION['username'] . "'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-
-//        while($row = mysql_fetch_array($userquery, MYSQL_ASSOC)){
-//            $username = $row['username'];
-//            $first_name = $row['first_name'];
-//            $last_name = $row['last_name'];
-//            $email = $row['email'];
-//            $phone_number = $row['phone_number'];
-//            $address = $row['address'];
-//        }
 ?>
 
 <!DOCTYPE html>
@@ -128,6 +119,43 @@ $cuser = $_SESSION['username'];
                       <button class="btn waves-effect waves-light red lighten-1" type="submit" name="editp" onclick="location.href='editprofile.php';"> Edit Profile</button>
 
                 </div>
+                  
+                <div class="card-panel">
+                   <h2>View Order History</h2>
+                  
+                    <table id="profilehistory">
+                    <thead>
+                        <tr class="#ff5252 red accent-2">
+                            <th>Food Package</th>
+                            <th>Purchased Date</th>
+                            <th>Delivere Date</th>
+				            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+				            <td>Food Package 1</td>
+				            <td>18/01/2018</td>
+                            <td>30/01/2018</td>
+				            <td>RM150.00</td>
+			             </tr>
+                  
+                         <tr>
+				            <td>Food Package 4</td>
+				            <td>20/03/2018</td>
+                            <td>01/04/2018</td>
+				            <td>RM154.00</td>
+			             </tr>
+                  
+                          <tr>
+				            <td>Food Package 3</td>
+				            <td>4/04/2018</td>
+                            <td>20/04/2018</td>
+				            <td>RM185.00</td>
+			             </tr>
+                  </tbody>
+                    </table>
+                  </div>
             </div>
 		
 		<footer class="page-footer z-depth-3" id="profile_footer">
