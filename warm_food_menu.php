@@ -34,7 +34,7 @@
 		<link rel="stylesheet" href="css/food_menu.css">
 		
 		<!-- Food Package Data -->
-		<script src="js/food_package.js"></script>
+		<script src="js/warm_food_menu.js"></script>
 	</head>
 	
 	<body data-ng-app="food_menu">
@@ -64,7 +64,7 @@
 				<div data-ng-repeat="package in food_package" class="col s4">
 					<div class="card large waves-effect waves-block waves-light">
 						<div class="card-image">
-							<img class="activator" src="img/food/wamfd{{$index + 1}}.jpg">
+							<img class="activator" src="img/food/warm/wamfd{{$index + 1}}.jpg">
 						</div>
 						<div class="card-content">
 							<span class="card-title activator">Food Package {{$index + 1}}<i class="material-icons right">more_vert</i></span>
