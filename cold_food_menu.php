@@ -65,7 +65,7 @@
 				<div data-ng-repeat="package in food_package" class="col s4">
 					<div class="card large waves-effect waves-block waves-light">
 						<div class="card-image">
-							<img class="activator" src="img/food/cf{{$index + 1}}.jpg">
+							<img class="activator" src="img/food/cold/cf{{$index + 1}}.jpg">
 						</div>
 						<div class="card-content">
 							<span class="card-title activator">Food Package {{$index + 1}}<i class="material-icons right">more_vert</i></span>
