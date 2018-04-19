@@ -45,13 +45,14 @@
 					<ul id="nav" class="right">
 						<li><a href="./food_menu.php">Food Menu</a></li>
 						<li><a href="about_us.php">About Us</a></li>
-						<li><a href="#">Login</a></li>
+						<li><a href="<?php include 'includes/user_nav_tab.php'?>"></a></li>
 					</ul>
 				</div>
 				<div class="nav-wrapper z-depth-0 grey lighten-4">
 					<div class="row">
 						<a href="./index.php" id="first_breadcrumb" class="breadcrumb red-text text-darken-1">Home</a>
 						<a href="./food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Food Menu</a>
+						<a href="./warm_food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Warm Food Menu</a>
 					</div>
 				</div>
 			</nav>
@@ -75,7 +76,7 @@
 							<p>{{package.info}}</p>
 						</div>
 						<div class="card-action">
-							<a href="#">BUY</a>
+							<a href="food_buy_info.php?food-package='{{$index + 1}}'">BUY</a>
 						</div>
 					</div>
 				</div>
