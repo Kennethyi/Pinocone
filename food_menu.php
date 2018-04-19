@@ -77,8 +77,12 @@
 			</header>
 			
 			<!--Food Category- Warm and Cold-->
+				<a href="cold_food_menu.php">
                                 <img class="responsive-img" src="img/food/cool.jpg">
+								</a>
+								<a href="warm_food_menu.php">
                                 <img class="responsive-img" src="img/food/wam.jpg">
+								</a>
                                 
 
 			
