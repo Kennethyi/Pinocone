@@ -1,11 +1,15 @@
 <?php 
 session_start();
 $db = mysqli_connect('localhost', 'root', '', 'pinocone');
+
 $cuser = $_SESSION['username'];
     //USER QUERY FOR GETTING USER LOGIN INFORMATION FOR PROFILE DIAPLAY
     $sql = "SELECT * FROM user WHERE username = '" . $_SESSION['username'] . "'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $billsql = "Select * FROM orders WHERE username = '" . $_SESSION['username'] . "'";
+    $billresult = mysqli_query($db, $billsql);
+   // $billrow = mysqli_fetch_array($billresult,MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -122,40 +126,49 @@ $cuser = $_SESSION['username'];
                   
                 <div class="card-panel">
                    <h2>View Order History</h2>
+                    <?php
+                        echo "<div class='table-responsive'>";
+                            echo "<table class='table'>";
+                                echo "<thead>";
+                                    echo "<tr>";
+                                        echo "<th>Username</th>";
+                                        echo "<th>First Name</th>";
+                                        echo "<th>Last Name</th>";
+                                        echo "<th>Address 1</th>";
+                                        echo "<th>Address 2</th>";
+                                        echo "<th>City</th>";
+                                        echo "<th>State</th>";
+                                        echo "<th>Postcode</th>";
+                                        echo "<th>Food Package</th>";
+                                        echo "<th>Order ID</th>";
+                                    echo "</tr>";
+                                echo "</thead>";
                   
-                    <table id="profilehistory">
-                    <thead>
-                        <tr class="#ff5252 red accent-2">
-                            <th>Food Package</th>
-                            <th>Purchased Date</th>
-                            <th>Delivere Date</th>
-				            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-				            <td>Food Package 1</td>
-				            <td>18/01/2018</td>
-                            <td>30/01/2018</td>
-				            <td>RM150.00</td>
-			             </tr>
+                                echo "<tbody>";
+                                    if($billresult-> num_rows>0)
+                                        {
+                                           while($billrow=$billresult->fetch_assoc()){
+                                              echo "<tr>";
+                                                echo "<td>" .$billrow['username']. "</td>";
+                                                echo "<td>" .$billrow['first_name']. "</td>";
+                                                echo "<td>" .$billrow['last_name']. "</td>";
+                                                echo "<td>" .$billrow['address1']. "</td>";
+                                                echo "<td>" .$billrow['address2']. "</td>";
+                                                echo "<td>" .$billrow['city']. "</td>";
+                                                echo "<td>" .$billrow['statee']. "</td>";
+                                                echo "<td>" .$billrow['postcode']. "</td>";
+                                                echo "<td>" .$billrow['foodpackage']. "</td>";
+                                                echo "<td>" .$billrow['orderid']. "</td>";
+                                                echo "</tr>"; 
+                                           }
+                                        }
+                                echo "</tbody>";
                   
-                         <tr>
-				            <td>Food Package 4</td>
-				            <td>20/03/2018</td>
-                            <td>01/04/2018</td>
-				            <td>RM154.00</td>
-			             </tr>
-                  
-                          <tr>
-				            <td>Food Package 3</td>
-				            <td>4/04/2018</td>
-                            <td>20/04/2018</td>
-				            <td>RM185.00</td>
-			             </tr>
-                  </tbody>
-                    </table>
-                  </div>
+                            echo "</table>";
+                        echo "</div>";
+                        
+                    ?>
+                </div>
             </div>
 		
 		<footer class="page-footer z-depth-3" id="profile_footer">
