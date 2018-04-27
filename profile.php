@@ -131,14 +131,7 @@ $cuser = $_SESSION['username'];
                             echo "<table class='table'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Username</th>";
-                                        echo "<th>First Name</th>";
-                                        echo "<th>Last Name</th>";
-                                        echo "<th>Address 1</th>";
-                                        echo "<th>Address 2</th>";
-                                        echo "<th>City</th>";
-                                        echo "<th>State</th>";
-                                        echo "<th>Postcode</th>";
+                                        echo "<th>Address</th>";
                                         echo "<th>Food Package</th>";
                                         echo "<th>Order ID</th>";
                                     echo "</tr>";
@@ -149,14 +142,8 @@ $cuser = $_SESSION['username'];
                                         {
                                            while($billrow=$billresult->fetch_assoc()){
                                               echo "<tr>";
-                                                echo "<td>" .$billrow['username']. "</td>";
-                                                echo "<td>" .$billrow['first_name']. "</td>";
-                                                echo "<td>" .$billrow['last_name']. "</td>";
-                                                echo "<td>" .$billrow['address1']. "</td>";
-                                                echo "<td>" .$billrow['address2']. "</td>";
-                                                echo "<td>" .$billrow['city']. "</td>";
-                                                echo "<td>" .$billrow['statee']. "</td>";
-                                                echo "<td>" .$billrow['postcode']. "</td>";
+                                                echo "<td>" .$billrow['address1']. ", " .$billrow['address2']. ", " 
+												.$billrow['city']. ", " .$billrow['postcode']."</td>";
                                                 echo "<td>" .$billrow['foodpackage']. "</td>";
                                                 echo "<td>" .$billrow['orderid']. "</td>";
                                                 echo "</tr>"; 
