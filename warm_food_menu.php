@@ -25,7 +25,7 @@
 		<script src="js/angular.js"></script>
 		
 		<!-- Material icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/material-icon.css" rel="stylesheet">
 		
 		<!-- Masonry Grid Layout Lib -->
 		<script src="js/masonry.js"></script>
@@ -76,7 +76,7 @@
 							<p>{{package.info}}</p>
 						</div>
 						<div class="card-action">
-							<a href="food_buy_info.php?food-package='{{$index + 1}}'">BUY</a>
+							<a href="warm_food_buy_info.php?foodpackage='{{$index + 1}}'">BUY</a>
 						</div>
 					</div>
 				</div>
