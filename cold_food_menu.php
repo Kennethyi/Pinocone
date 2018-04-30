@@ -25,8 +25,8 @@
 		<!-- AngularJS -->
 		<script src="js/angular.js"></script>
 		
-		<!-- Material icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Material icons(ed) -->
+		<link href="css/material-icon.css" rel="stylesheet">
 		
 		<!-- Masonry Grid Layout Lib -->
 		<script src="js/masonry.js"></script>
@@ -34,8 +34,8 @@
 		<!-- Food Menu CSS -->
 		<link rel="stylesheet" href="css/food_menu.css">
 		
-		<!-- Food Package Data -->
-		<script src="js/food_package.js"></script>
+		<!-- Food Package Data(ed) -->
+		<script src="js/cold_food_menu.js"></script>
 	</head>
 	
 	<body data-ng-app="food_menu">
@@ -77,7 +77,7 @@
 							<p>{{package.info}}</p>
 						</div>
 						<div class="card-action">
-							<a href="food_buy_info.php?food-package='{{$index + 1}}'">BUY</a>
+							<a href="cold_food_buy_info.php?food-package='{{$index + 1}}'">BUY</a>
 						</div>
 					</div>
 				</div>
