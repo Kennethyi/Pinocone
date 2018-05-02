@@ -4,7 +4,6 @@
     <head>
         <meta charset="utf-8" />
 
-        
         <title>Register</title>
 		
 		<!-- Materialize CSS -->
@@ -24,6 +23,7 @@
 		
         <!-- Login CSS  -->
 		<link rel="stylesheet" href="css/login.css">
+        
     </head>
     
     <body>
@@ -32,7 +32,6 @@
           <a href="index.php" class="brand-logo">Pinocone</a>
 		  </div>
         </nav>
-        <br/>
         <div class="container" id="login_container">
         <div class="card-panel">
         <div class="row">
@@ -42,7 +41,7 @@
 
             <div class="row">
                 <div class="input-field col s12">
-					<input id="username" type="text" class="validate" name="username">
+					<input id="username" type="text" class="validate" name="username" required="" placeholder="Enter Username Here" value="<?php echo $username; ?>">
 					<label for="username">Username</label>
                 </div>
             </div>
@@ -50,35 +49,35 @@
             <div class="row">
                 <div class="input-field col s6">
                 <label for="first_name">First Name</label>
-                <input id="first_name" type="text" class="validate" name="first_name">  
+                <input id="first_name" type="text" class="validate" name="first_name" required="" placeholder="Enter First Name Here" value="<?php echo $first_name; ?>">  
                 </div>
 
                 <div class="input-field col s6">
                 <label for="last_name">Last Name</label>
-                <input id="last_name" type="text" class="validate" name="last_name">
+                <input id="last_name" type="text" class="validate" name="last_name" required="" placeholder="Enter Last Name Here" value="<?php echo $last_name; ?>">
                 </div>
             </div>
 
           <div class="row">
             <div class="input-field col s6">
-              <input id="password" type="password" class="validate" name="password_1">
+              <input id="password" type="password" class="validate" name="password_1" required="" placeholder="Enter Password Here">
               <label for="password">Password</label>
             </div>
 
             <div class="input-field col s6">
-              <input id="rpassword" type="password" class="validate" name="password_2">
+              <input id="rpassword" type="password" class="validate" name="password_2" required="" placeholder="Please Enter Your Password Again Here">
               <label for="rpassword">Retype Password</label>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s7">
-              <input id="email" type="email" class="validate" name="email">
-              <label for="email">Email</label>
+              <input id="email" type="email" class="validate" name="email" required="" placeholder="Enter Email Address Here" value="<?php echo $email; ?>">
+              <label for="email" >Email</label>
             </div>
 
             <div class="input-field col s5">
-              <input id="phnum" type="text" class="validate" name="phnum">
+              <input id="phnum" type="text" class="validate" name="phnum" placeholder="Contact Number" value="<?php echo $phnum; ?>">
               <label for="phnum">Phone number</label>
             </div>
           </div>
@@ -86,8 +85,7 @@
           <div class="row">
             <div class="input-field col s12">
               <label for="add">Address</label>
-              <input id="add" type="text" class="validate" name="address">
-
+              <input id="add" type="text" class="validate" name="address" placeholder="Enter Address Information Here" value="<?php echo $address; ?>">
             </div>
           </div>
 

@@ -28,6 +28,14 @@
 
 		// form validation: ensure that the form is correctly filled
 		if (empty($username)) { array_push($errors, "Username is required"); }
+        
+        // form validation: check if username input already exists in database
+        $chkusernamequery = "SELECT * FROM user WHERE username='$username'";
+        $resultusernamequery = mysqli_query($db, $chkusernamequery);
+        if (mysqli_num_rows($resultusernamequery) == 1) {
+				array_push($errors, "Username already exists, please input different username");
+        }
+        
 		if (empty($email)) { array_push($errors, "Email is required"); }
 		if (empty($password_1)) { array_push($errors, "Password is required"); }
 

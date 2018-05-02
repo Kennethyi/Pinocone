@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="input-field col s12 ">
                 <label for="user" class="word">Username</label>
-                <input type="text" id="user"  placeholder="Enter Username" name="username"
+                <input type="text" id="user"  placeholder="Enter Username" name="username required="""
                 value="<?php if (isset($_POST["username"])) echo $_POST["username"]; ?>">
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="row">
             <div class="input-field col s12">
               <label for="password">Password</label>
-              <input type="password" id="password" placeholder="Enter Password" name="password"
+              <input type="password" id="password" placeholder="Enter Password" name="password" required=""
               value="<?php if (isset($_POST["password"])) echo $_POST["password"]; ?>">
     
             </div>
