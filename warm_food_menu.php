@@ -45,7 +45,7 @@
 					<ul id="nav" class="right">
 						<li><a href="./food_menu.php">Food Menu</a></li>
 						<li><a href="about_us.php">About Us</a></li>
-						<li><a href=<?php include 'includes/user_nav_tab.php'?>
+						<li><a href="<?php include 'includes/user_nav_tab.php'?>
 					</ul>
 				</div>
 				<div class="nav-wrapper z-depth-0 grey lighten-4">

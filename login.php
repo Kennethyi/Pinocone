@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="input-field col s12 ">
                 <label for="user" class="word">Username</label>
-                <input type="text" id="user"  placeholder="Enter Username" name="username required="""
+                <input type="text" id="user"  placeholder="Enter Username" name="username" required=""
                 value="<?php if (isset($_POST["username"])) echo $_POST["username"]; ?>">
                 </div>
             </div>
