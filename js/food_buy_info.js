@@ -7,6 +7,12 @@ var instance1 = M.FormSelect.init(elem1);
 var elem1 = document.querySelector('#year');
 var instance2 = M.FormSelect.init(elem1);
 
+var elem1 = document.querySelector('#statee');
+var instance3 = M.FormSelect.init(elem1);
+
+var elem1 = document.querySelector('#city');
+var instance4 = M.FormSelect.init(elem1);
+
 var username = "";
 var foodpackage = "";
 var first_name = "";

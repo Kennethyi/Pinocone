@@ -15,6 +15,7 @@ $_SESSION['foodpackage'] = $food_package;
        // if(!($food_package =$_GET['food-package']))
         //{header('location:warm_food_menu.php')}
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -120,19 +121,49 @@ $_SESSION['foodpackage'] = $food_package;
 								</div>
 							</div>
 							
-							<div class="row">
-								<div id="paymentform" class="input-field col s11">
-									<input id="city" type="text" class="validate" name="city" required="">
-									<label for="city">City</label>
-								</div>
+							<div  style="margin-left:0px; margin-right:0px;" class="row">
+                                <div class="input-field col s5">
+								<select id="city">
+                                    <option value=""  selected>Please choose a city</option>
+									<option value="Kuala Lumpur">Kuala Lumpur</option>
+									<option value="Johor Bahru">Johor Bahru</option>
+									<option value="George Town">George Town</option>
+									<option value="Kuching">Kuching</option>
+									<option value="Kota Kinabalu">Kota Kinabalu</option>
+									<option value="Malacca City">Malacca City</option>
+									<option value="Ipoh">Ipoh</option>
+									<option value="Petaling Jaya">Petaling Jaya</option>
+									<option value="Pahang">Pahang</option>
+									<option value="Kuantan">Kuantan</option>
+									<option value="Miri">Miri</option>
+									<option value="Kuala Selangor">Kuala Selangor</option>
+                                    <option value="Sibu">Sibu</option>
+								</select>
+								<label style="margin-left:-10px;" for="city">City</label>
+		
+							 </div>
+                            </div>
+                            <div style="margin-left:0px; margin-right:0px;" class="row">
+							<div class="input-field col s5">
+								<select id="statee">
+                                    <option value=""  selected>Please choose a state</option>
+									<option value="Sabah">Sabah</option>
+									<option value="Sarawak">Sarawak</option>
+									<option value="Selangor">Selangor</option>
+									<option value="Penang">Penang</option>
+									<option value="Johor">Johor</option>
+									<option value="Terengganu">Terengganu</option>
+									<option value="Perak">Perak</option>
+									<option value="Malacca">Malacca</option>
+									<option value="Pahang">Pahang</option>
+									<option value="Kelantan">Kelantan</option>
+									<option value="Kedah">Kedah</option>
+									<option value="Negeri Sembilan">Negeri Sembilan</option>
+                                    <option value="Perlis">Perlis</option>
+								</select>
+								<label style="margin-left:-10px;" for="statee">State</label>
 							</div>
-							
-							<div class="row">
-								<div class="input-field col s5">
-									<input id="statee" type="text" class="validate" name="statee" required="">
-									<label for="statee">State</label>
-								</div>
-								
+                              
 								<div class="input-field col s5 offset-s1">
 									<input id="postcode" type="number" class="validate" name="postcode" required="">
 									<label for="postcode">Postcode</label>
@@ -254,6 +285,7 @@ $_SESSION['foodpackage'] = $food_package;
 		</footer>
 		<!-- Food Buy Info JS -->
 		<script src="js/food_buy_info.js"></script>
+        
 
 	</body>
 </html>
