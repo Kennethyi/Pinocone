@@ -1,0 +1,2 @@
+To send email using xampp, be sure to include the php.ini located in the emailphp folder into C:\xampp\php
+Emails sent using mail() function in php will be outputted in C:\xampp\mailoutput

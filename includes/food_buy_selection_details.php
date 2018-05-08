@@ -41,12 +41,32 @@
 		if (empty($postcode)) 		{ array_push($errors, "Postcode is required"); }
 		if (empty($foodpackage)) 	{ array_push($errors, "Food Package is required"); }
 		if (empty($orderid)) 		{ array_push($errors, "Order ID is required"); }
+                    
 
+        
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
 			$query = "INSERT INTO orders (username, first_name, last_name, address1, address2, city, statee, postcode, foodpackage, orderid) 
 					  VALUES('$username', '$first_name', '$last_name', '$address1', '$address2', '$city', '$statee', '$postcode' , '$foodpackage', '$orderid')";
 			mysqli_query($db, $query);
+            
+            $usersql = "SELECT * FROM user WHERE username = '$username'";
+            $usersqlresult = mysqli_query($db, $usersql);
+            $usersqlrow = mysqli_fetch_array($usersqlresult,MYSQLI_ASSOC);
+            $to = $usersqlrow["email"];
+
+            $message =
+            "Thank you for your purchase! $username\n
+            First name: $first_name\n
+            Last name: $last_name\n
+            Address 1: $address1\n
+            Address 2: $address2\n
+            City: $city\n
+            State: $statee\n
+            Post Code: $postcode"
+            ;
+
+            mail($to,"Pinocone Purchase Details",$message);
 		}
 		else
 			echo "Error 0" + $errors;

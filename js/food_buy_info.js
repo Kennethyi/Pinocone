@@ -103,7 +103,7 @@ $(function() {
 		
 		instance.close();
 		
-		alert("Your order has been successfuly added!");
+		alert("Your order has been successfuly added! Check your email or user profile for purchase details");
 		
 		window.location.href = 'food_menu.php';
 		
