@@ -13,6 +13,9 @@ var instance3 = M.FormSelect.init(elem1);
 var elem1 = document.querySelector('#city');
 var instance4 = M.FormSelect.init(elem1);
 
+var elem1 = document.querySelector('#fpp');
+var instance5 = M.FormSelect.init(elem1);
+
 var username = "";
 var foodpackage = "";
 var first_name = "";
@@ -22,6 +25,7 @@ var address2 = "";
 var city = "";
 var statee = "";
 var postcode = "";
+var FPP = "";
 
 $(function() {
 	
@@ -62,6 +66,9 @@ $(function() {
 		city = $("#city").val();
 			if(city == "")
 				errstr += "City cannot be empty! ";
+       FPP = $("#fpp").val();
+			if(FPP == "")
+				errstr += "Food Packaging Prefrences cannot be empty! ";
 		statee = $("#statee").val();
 			if(statee == "")
 				errstr += "State cannot be empty! ";
@@ -86,6 +93,7 @@ $(function() {
 		'&address1=' + address1 + 
 		'&address2=' + address2 + 
 		'&city=' + city + 
+        '&fpp='+FPP+
 		'&statee=' + statee + 
 		'&postcode=' + postcode + 
 		'&foodpackage=' + foodpackage + 
@@ -103,7 +111,7 @@ $(function() {
 		
 		instance.close();
 		
-		alert("Your order has been successfuly added! Check your email or user profile for purchase details");
+		alert("Your order has been successfuly added!");
 		
 		window.location.href = 'food_menu.php';
 		
