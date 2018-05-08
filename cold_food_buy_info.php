@@ -139,7 +139,15 @@ $_SESSION['food-package'] = $food_package;
                                     <option value="Sibu">Sibu</option>
 								</select>
 								<label style="margin-left:-10px;" for="city">City</label>
-		
+							 </div>
+                                <div class="input-field col s5 offset-s1">
+								<select id="fpp">
+                                    <option value=""  selected>Please choose a Food Packaging</option>
+									<option value="Buffet style">Buffet style</option>
+									<option value="Lunch Box style">Lunch Box style</option>
+								</select>
+                                    
+								<label style="margin-left:-10px;" for="fpp">Food Packaging Prefrences</label>
 							 </div>
                             </div>
                             <div style="margin-left:0px; margin-right:0px;" class="row">
