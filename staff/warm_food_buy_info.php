@@ -9,8 +9,8 @@
 		unset($_SESSION['username']);
 		header("location: login.php");
 	}
-	if (($food_package = $_GET['food-package']))
-$_SESSION['food-package'] = $food_package;
+	if (($food_package = $_GET['foodpackage']))
+$_SESSION['foodpackage'] = $food_package;
         
        // if(!($food_package =$_GET['food-package']))
         //{header('location:warm_food_menu.php')}
@@ -39,7 +39,7 @@ $_SESSION['food-package'] = $food_package;
 		<link rel="stylesheet" href="css/food_buy.css">
 		
 		<!-- Food Package Data -->
-		<script src="js/cold_food_menu.js"></script>
+		<script src="js/warm_food_menu.js"></script>
 		
 	</head>
 	
@@ -51,15 +51,15 @@ $_SESSION['food-package'] = $food_package;
 					<ul id="nav" class="right">
 						<li><a href="./food_menu.php">Food Menu</a></li>
 						<li><a href="about_us.php">About Us</a></li>
-                        <?php include 'includes/user_nav_tab.php'?>
+                        <?php include 'includes/user_nav_tab.php'?>"></a></li>
 					</ul>
 				</div>
 				<div class="nav-wrapper z-depth-0 grey lighten-4">
 					<div class="row">
 						<a href="./index.php" id="first_breadcrumb" class="breadcrumb red-text text-darken-1">Home</a>
 						<a href="./food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Food Menu</a>
-                        <a href="./cold_food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Cold Food Menu</a>
-						<a href="#" class="breadcrumb red-text text-darken-1 red-darken-1">Food Package <?php echo str_replace("'", "", $_SESSION['food-package']);?></a>
+                        <a href="./warm_food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Warm Food Menu</a>
+						<a href="#" class="breadcrumb red-text text-darken-1 red-darken-1">Food Package <?php echo str_replace("'", "", $_SESSION['foodpackage']);?></a>
 					</div>
 				</div>
 			</nav>
@@ -68,22 +68,22 @@ $_SESSION['food-package'] = $food_package;
 			<div data-ng-controller="food_ctrl" id="content" class="container" style="margin-top: 82px;">
 			
 				<div id="parentcard" class="card-panel z-depth-3">
-					<p id="cardtitle" class="row red lighten-1 center white-text">Food Package <?php echo str_replace("'", "", $_SESSION['food-package']);?></p>
+					<p id="cardtitle" class="row red lighten-1 center white-text">Food Package <?php echo str_replace("'", "", $_SESSION['foodpackage']);?></p>
 					
 					<h5 class="outerh5">Your selection information</h5>
 					
 					<div id="preview" data-ng-init="counts=[0,1,2,3]" class="row">
 						<div data-ng-repeat="loop in counts" class="col s3">
-							<img src="img/food/cool{{food_package[<?php echo $_SESSION['food-package'];?> - 1].imgindex + $index}}.jpg"/>
+							<img src="img/food/wamf{{food_package[<?php echo $_SESSION['foodpackage'];?> - 1].imgindex + $index}}.jpg"/>
 						</div>
 					</div>
 					
 					<blockquote>
-					{{food_package[<?php echo $_SESSION['food-package'];?> - 1].info}}
+					{{food_package[<?php echo $_SESSION['foodpackage'];?> - 1].info}}
 					</blockquote>
 					
 					<div id="pricecard" class="card-panel red lighten-1">
-						<p class="white-text">{{food_package[<?php echo $_SESSION['food-package'];?> - 1].price}}</p>
+						<p class="white-text">{{food_package[<?php echo $_SESSION['foodpackage'];?> - 1].price}}</p>
 					</div>
 					
 					<div class="divider"></div>
@@ -120,57 +120,19 @@ $_SESSION['food-package'] = $food_package;
 								</div>
 							</div>
 							
-							<div  style="margin-left:0px; margin-right:0px;" class="row">
-                                <div class="input-field col s5">
-								<select id="city">
-                                    <option value=""  selected>Please choose a city</option>
-									<option value="Kuala Lumpur">Kuala Lumpur</option>
-									<option value="Johor Bahru">Johor Bahru</option>
-									<option value="George Town">George Town</option>
-									<option value="Kuching">Kuching</option>
-									<option value="Kota Kinabalu">Kota Kinabalu</option>
-									<option value="Malacca City">Malacca City</option>
-									<option value="Ipoh">Ipoh</option>
-									<option value="Petaling Jaya">Petaling Jaya</option>
-									<option value="Pahang">Pahang</option>
-									<option value="Kuantan">Kuantan</option>
-									<option value="Miri">Miri</option>
-									<option value="Kuala Selangor">Kuala Selangor</option>
-                                    <option value="Sibu">Sibu</option>
-								</select>
-								<label style="margin-left:-10px;" for="city">City</label>
-							 </div>
-                                <div class="input-field col s5 offset-s1">
-								<select id="fpp">
-                                    <option value=""  selected>Please choose a Food Packaging</option>
-									<option value="Buffet style">Buffet style</option>
-									<option value="Lunch Box style">Lunch Box style</option>
-								</select>
-                                    
-								<label style="margin-left:-10px;" for="fpp">Food Packaging Prefrences</label>
-							 </div>
-                            </div>
-                            <div style="margin-left:0px; margin-right:0px;" class="row">
-							<div class="input-field col s5">
-								<select id="statee">
-                                    <option value=""  selected>Please choose a state</option>
-									<option value="Sabah">Sabah</option>
-									<option value="Sarawak">Sarawak</option>
-									<option value="Selangor">Selangor</option>
-									<option value="Penang">Penang</option>
-									<option value="Johor">Johor</option>
-									<option value="Terengganu">Terengganu</option>
-									<option value="Perak">Perak</option>
-									<option value="Malacca">Malacca</option>
-									<option value="Pahang">Pahang</option>
-									<option value="Kelantan">Kelantan</option>
-									<option value="Kedah">Kedah</option>
-									<option value="Negeri Sembilan">Negeri Sembilan</option>
-                                    <option value="Perlis">Perlis</option>
-								</select>
-								<label style="margin-left:-10px;" for="statee">State</label>
+							<div class="row">
+								<div id="paymentform" class="input-field col s11">
+									<input id="city" type="text" class="validate" name="city" required="">
+									<label for="city">City</label>
+								</div>
 							</div>
-                              
+							
+							<div class="row">
+								<div class="input-field col s5">
+									<input id="statee" type="text" class="validate" name="statee" required="">
+									<label for="statee">State</label>
+								</div>
+								
 								<div class="input-field col s5 offset-s1">
 									<input id="postcode" type="number" class="validate" name="postcode" required="">
 									<label for="postcode">Postcode</label>

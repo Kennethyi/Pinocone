@@ -11,23 +11,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home</title>
+		
+		<!-- Jquery -->
+		<script src="../js/jquery.js"></script>
+		
 		<!-- Materialize CSS -->
 		<link rel="stylesheet" href="../css/materialize.css">
 
 		<!-- Materialize JavaScript -->
 		<script src="../js/materialize.js"></script>
 		
-		<!-- Material icons -->
-		<link href="../css/material-icon.css" rel="stylesheet">
-		
 		<!-- AngularJS -->
 		<script src="../js/angular.js"></script>
 		
-		<!-- Index CSS -->
-		<link rel="stylesheet" href="../css/index.css">
-		
 		<!-- Search JS -->
 		<script src="../js/search.js"></script>
+		
+		<!-- Material icons -->
+		<link href="../css/material-icon.css" rel="stylesheet">
+		
+		<!-- Index CSS -->
+		<link rel="stylesheet" href="../css/index.css">
 
 	</head>
 	
@@ -38,8 +42,8 @@
 				<div class="nav-wrapper z-depth-3">
 					<a href="staffindex.php" class="brand-logo">Pinocone</a>
 					<ul id="nav" class="right">
-						<li><a href="staff_food_menu.php">Food Menu</a></li>
-						<li><a href="<?php include '..\includes\user_nav_tab.php'?>
+						<li><a href="food_menu.php">Food Menu</a></li>
+						<?php include '..\includes\user_nav_tab.php'?>
 					</ul>
 				</div>
 			</nav>
@@ -73,17 +77,27 @@
 						</thead>
 
 						<tbody>
-							<tr data-ng-repeat="order in orders">
+							<tr id="tooltipthis" data-ng-repeat="order in orders">
 								<td>{{order.username}}</td>
 								<td>{{order.orderid}}</td>
 								<td>{{order.address}}</td>
 								<td>{{order.foodpackage}}</td>
-								<td>{{order.orderid | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+								<td>
+									{{order.orderid | date:'yyyy-MM-dd HH:mm:ss Z'}}
+									<a href="" data-ng-click="delete(order.orderid, $index)" class="right" style="color: unset;"><i class="material-icons">delete</i></a>
+									<a href="#" class="right tooltipped" data-html="true" data-position="top" data-tooltip="Edit" style="color: unset;"><i class="material-icons">edit</i></a>
+								</td>
 							<tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
+		</div>
+		
+		<div class="right">
+			<a href="food_menu.php" id="add-button" class="btn-floating btn-large tooltipped waves-effect waves-light red" data-html="true" data-position="left" data-tooltip="Add Orders" style="bottom: 80px; right: 24px;">
+				<i class="material-icons">add</i>
+			</a>
 		</div>
 		
 		<footer class="page-footer z-depth-3">

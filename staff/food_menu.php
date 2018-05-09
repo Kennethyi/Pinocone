@@ -16,25 +16,25 @@
 		<meta charset="UTF-8">
 		<title>Food Menu</title>
 		<!-- Materialize CSS -->
-		<link rel="stylesheet" href="css/materialize.css">
+		<link rel="stylesheet" href="../css/materialize.css">
 
 		<!-- Materialize JavaScript -->
-		<script src="js/materialize.js"></script>
+		<script src="../js/materialize.js"></script>
 		
 		<!-- AngularJS -->
-		<script src="js/angular.js"></script>
+		<script src="../js/angular.js"></script>
 		
 		<!-- JQuery -->
-		<script src="js/jquery.js"></script>
+		<script src="../js/jquery.js"></script>
 		
 		<!-- Material icons -->
-		<link href="css/material-icon.css" rel="stylesheet">
+		<link href="../css/material-icon.css" rel="stylesheet">
 		
 		<!-- Food Menu CSS -->
-		<link rel="stylesheet" href="css/food_menu.css">
+		<link rel="stylesheet" href="../css/food_menu.css">
 		
 		<!-- Food Menu JS -->
-		<script src="js/food_menu.js"></script>
+		<script src="../js/food_menu.js"></script>
 		
 	</head>
 	
@@ -60,29 +60,28 @@
 			<header>
 				<nav>
 					<div class="nav-wrapper z-depth-3">
-						<a href="./index.php" class="brand-logo">Pinocone</a>
+						<a href="staffindex.php" class="brand-logo">Pinocone</a>
 						<ul id="nav" class="right">
-							<li><a href="./food_menu.php">Food Menu</a></li>
-							<li><a href="about_us.php">About Us</a></li>
-							<?php include 'includes/user_nav_tab.php'?>
+							<li><a href="food_menu.php">Food Menu</a></li>
+							<?php include '../includes/user_nav_tab.php'?>
 						</ul>
 					</div>
 					<div class="nav-wrapper z-depth-0 grey lighten-4">
 						<div class="row">
-							<a href="./index.php" id="first_breadcrumb" class="breadcrumb red-text text-darken-1">Home</a>
-							<a href="./food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Food Menu</a>
+							<a href="staffindex.php" id="first_breadcrumb" class="breadcrumb red-text text-darken-1">Home</a>
+							<a href="food_menu.php" class="breadcrumb red-text text-darken-1 red-darken-1">Food Menu</a>
 						</div>
 					</div>
 				</nav>
 			</header>
 			
-			<!--Food Category- Warm and Cold-->
-				<a href="cold_food_menu.php">
-                                <img class="responsive-img" src="img/food/cool.jpg">
-								</a>
-								<a href="warm_food_menu.php">
-                                <img class="responsive-img" src="img/food/wam.jpg">
-								</a>
+				<!--Food Category- Warm and Cold-->
+			<a href="cold_food_menu.php">
+				<img class="responsive-img" src="../img/food/cool.jpg"/>
+			</a>
+			<a href="warm_food_menu.php">
+				<img class="responsive-img" src="../img/food/wam.jpg"/>
+			</a>
                                 
 
 			
@@ -96,8 +95,8 @@
 						<div class="col l4 offset-l2 s12">
 							<h5 class="white-text">Links</h5>
 							<ul>
-								<li><a class="grey-text text-lighten-3" href="about_us.php">About Us</a></li>
-								<li><a class="grey-text text-lighten-3" href="contact_us.php">Contact</a></li>
+								<li><a class="grey-text text-lighten-3" href="../about_us.php">About Us</a></li>
+								<li><a class="grey-text text-lighten-3" href="../contact_us.php">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -110,7 +109,7 @@
 				</div>
 			</footer>
 			<!-- Food Package Data -->
-			<script src="js/food_package.js"></script>
+			<script src="../js/food_package.js"></script>
 		</div>
 	</body>
 </html>
