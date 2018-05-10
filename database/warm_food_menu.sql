@@ -41,12 +41,12 @@ CREATE TABLE `warm_food_menu` (
 --
 
 INSERT INTO `warm_food_menu` (`food_package`, `description`, `info`, `price`, `imgindex`) VALUES
-('Food Package 1', 'White rice, fried bee hoon, seafood tom yam, roasted chicken', 'Lunch or dinner set is served with seafood tomyam and comes with fried beehoon  and roasted chicken set', 'RM500 per set', 0),
-('Food Package 2', 'White rice, mamak style fried noodles, chicken buttermilk, roasted fish with sambal', 'Chicken buttermilk is currently a hotselling meal among Malaysians. Here, in Pinocone Catering, we served the dish together with a set of rice, mamak style fried noodels and roasted fish with it sambal', 'RM500 per set', 4),
-('Food Package 3', 'White rice, mixed vegetables, chicken curry, fried chicken wings', 'This lunch or dinner set comes with mixed vegetables, chicken curry and fried chicken', 'RM550 per set', 8),
-('Food Package 4', 'nasi lemak, nasi ayam penyet, laksa sarawak, beef satay', '4 sets of most popular dish in Malaysia is package together as one bombastic set', 'RM 1250', 12),
-('Food Package 5', 'nasi kerabu, pasta carbonara, salmon with crispy skin and rubarb puree,long beans with eggs and carrots', 'local favourites, nasi kerabu and long beans with eggs and carrots are served in this set alongside with western food sets, salmon with crispy skin and pasta carbonara', 'RM 1260', 16),
-('Food Package 6', 'spaghetti bolognaise, fried chicken, salmon with crispy skin and rubarb puree,chicken satay', 'The sweet and savoury taste of spaghetti bolognaise being outstanding together with the juicy taste of fried chicken and chicken satay with its peanut sauce. The salmon flesh is tender when it is eaten with the rubarb puree', 'RM 1260', 20);
+('Food Package 1', 'White rice, fried bee hoon, seafood tom yam, roasted chicken', 'Lunch or dinner set is served with seafood tomyam and comes with fried beehoon  and roasted chicken set', 'RM500 per 80 person', 0),
+('Food Package 2', 'White rice, mamak style fried noodles, chicken buttermilk, roasted fish with sambal', 'Chicken buttermilk is currently a hotselling meal among Malaysians. Here, in Pinocone Catering, we served the dish together with a set of rice, mamak style fried noodels and roasted fish with it sambal', 'RM500 per 80 person', 4),
+('Food Package 3', 'White rice, mixed vegetables, chicken curry, fried chicken wings', 'This lunch or dinner set comes with mixed vegetables, chicken curry and fried chicken', 'RM550 per 50 person', 8),
+('Food Package 4', 'nasi lemak, nasi ayam penyet, laksa sarawak, beef satay', '4 sets of most popular dish in Malaysia is package together as one bombastic set', 'RM 1250 per 80 person', 12),
+('Food Package 5', 'nasi kerabu, pasta carbonara, salmon with crispy skin and rubarb puree,long beans with eggs and carrots', 'local favourites, nasi kerabu and long beans with eggs and carrots are served in this set alongside with western food sets, salmon with crispy skin and pasta carbonara', 'RM 1260 per 80 person', 16),
+('Food Package 6', 'spaghetti bolognaise, fried chicken, salmon with crispy skin and rubarb puree,chicken satay', 'The sweet and savoury taste of spaghetti bolognaise being outstanding together with the juicy taste of fried chicken and chicken satay with its peanut sauce. The salmon flesh is tender when it is eaten with the rubarb puree', 'RM 1260 per 80 person', 20);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
