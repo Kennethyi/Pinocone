@@ -41,12 +41,12 @@ CREATE TABLE `cool_food_menu` (
 --
 
 INSERT INTO `cool_food_menu` (`food_package`, `description`, `info`, `price`, `imgindex`) VALUES
-('Food Package 1', 'egg tuna sandwich, lemon sorbet, papayas, banana cake', 'We serve common cold food like egg tuna sandwich and banana cake as they were never failed to make you embrace how delicious it is regardless of time', 'RM250', 0),
-('Food Package 2', 'strawberry and chocolate marble cake,banana cake, fruit pie, cherry sorbet', 'The famous marble cake is currently available in Pinocone Catering. Besides, we also added banana cake, fruit pie and the mouthwashing dish cherry sorbet', 'RM250', 4),
-('Food Package 3', 'Mango puding with pistacio, egg tart, kuih seri muka, mini chicken and cheese burger', 'Sweeten you palette with the mango puding and balance the sweetness with pistacio nuts. We also give local desert, kuih seri muka, egg tart and mini cheese and chicken burger', 'RM250', 8),
-('Food Package 4', 'curry puff, coleslaws, apples,chicken burrito', 'Mix and match the taste between western and local dishes with our curry puff and chicken burritos. You can enjoy them with the apples and coleslaw too!', 'RM255', 12),
-('Food Package 5', 'creme brulee, watermelon popsicle, kuih talam, oranges', 'Try out our creme brulee and watermelon popsicle. It will definitely melts in your mouth. Also, we add local desert, kuih talam and some oranges.', 'RM274', 16),
-('Food Package 6', 'vegetables popiah, strawberry chocolate marble cake, watermelons, chicken bacon  pizza', 'The hotselling marble cakes are back! This time it is paired with the legendary vegetables popiah,some watermelons and our brand new chicken bacon pizza!', 'RM274', 20);
+('Food Package 1', 'egg tuna sandwich, lemon sorbet, papayas, banana cake', 'We serve common cold food like egg tuna sandwich and banana cake as they were never failed to make you embrace how delicious it is regardless of time', 'RM250 per 80 person', 0),
+('Food Package 2', 'strawberry and chocolate marble cake,banana cake, fruit pie, cherry sorbet', 'The famous marble cake is currently available in Pinocone Catering. Besides, we also added banana cake, fruit pie and the mouthwashing dish cherry sorbet', 'RM250 per 80 person', 4),
+('Food Package 3', 'Mango puding with pistacio, egg tart, kuih seri muka, mini chicken and cheese burger', 'Sweeten you palette with the mango puding and balance the sweetness with pistacio nuts. We also give local desert, kuih seri muka, egg tart and mini cheese and chicken burger', 'RM250 per 50 person', 8),
+('Food Package 4', 'curry puff, coleslaws, apples,chicken burrito', 'Mix and match the taste between western and local dishes with our curry puff and chicken burritos. You can enjoy them with the apples and coleslaw too!', 'RM255 per 50 person', 12),
+('Food Package 5', 'creme brulee, watermelon popsicle, kuih talam, oranges', 'Try out our creme brulee and watermelon popsicle. It will definitely melts in your mouth. Also, we add local desert, kuih talam and some oranges.', 'RM274 per 50 person', 16),
+('Food Package 6', 'vegetables popiah, strawberry chocolate marble cake, watermelons, chicken bacon  pizza', 'The hotselling marble cakes are back! This time it is paired with the legendary vegetables popiah,some watermelons and our brand new chicken bacon pizza!', 'RM274 pr 50 person', 20);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
