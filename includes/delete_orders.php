@@ -3,6 +3,6 @@
 	
 	$orderid = $_GET['id'];
 	
-	$delete = "DELETE * from orders WHERE orderid='$orderid'";
-	$results = mysqli_query($db, $query);
+	$delete = "DELETE from orders WHERE orderid='$orderid'";
+	mysqli_query($db, $delete);
 ?>
