@@ -121,6 +121,7 @@ $cuser = $_SESSION['username'];
                      </div>
                      
                       <button class="btn waves-effect waves-light red lighten-1" type="submit" name="editp" onclick="location.href='editprofile.php';"> Edit Profile</button>
+                       <button class="btn waves-effect waves-light red lighten-1 right" type="submit" name="subs" onclick="location.href='subscribe.php';"> Subscrption </button>
 
                 </div>
                   
