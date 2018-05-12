@@ -37,6 +37,23 @@ $(function() {
 			}
 	});
 	
+	var jfirstname = "";
+	
+	$.ajax({
+			url:"includes/getfirstname.php",
+			success: function(response){
+				jfirstname = response;
+			}
+	});
+	
+	var jlastname = "";
+	$.ajax({
+			url:"includes/getlastname.php",
+			success: function(response){
+				jlastname = response;
+			}
+	});
+	
 	var jfoodpackage = "";
 	$.ajax({
 			url:"includes/getfoodpackage.php",
@@ -49,14 +66,16 @@ $(function() {
 		var errstr = "";
 		
 		username = jusername;
+		first_name = jfirstname;
+		last_name = jlastname;
 		foodpackage = "Food Package " + jfoodpackage;
 		
-		first_name = $("#first_name").val();
+/* 		first_name = $("#first_name").val();
 			if(first_name == "")
 				errstr += "First name cannot be empty! ";
 		last_name = $("#last_name").val();
 			if(last_name == "")
-				errstr += "Last name cannot be empty! ";
+				errstr += "Last name cannot be empty! "; */
 		address1 = $("#address1").val();
 			if(address1 == "")
 				errstr += "Address 1 cannot be empty! ";
@@ -78,9 +97,8 @@ $(function() {
 			
 		if(errstr != "")
 			alert(errstr);
-		else {
+		else 
 			instance.open();
-		}
 	});
 	
 	$("#save_order").click(function() {

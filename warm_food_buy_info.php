@@ -89,21 +89,8 @@ $_SESSION['foodpackage'] = $food_package;
 					
 					<div class="divider"></div>
 					
-					<h5 class="outerh5" >Your basic information</h5>
-					
 					<div id="parentpaymentform" class="row">
 						<form class="col s12">
-							<div class="row">
-								<div class="input-field col s5">
-									<input id="first_name" type="text" class="validate" name="first_name" required="">
-									<label for="first_name">First Name</label>
-								</div>
-								
-								<div class="input-field col s5 offset-s1">
-									<input id="last_name" type="text" class="validate" name="last_name" required="">
-									<label for="last_name">Last Name</label>
-								</div>
-							</div>
 							
 							<h5 id="innerh5">Your address details</h5>
 							
