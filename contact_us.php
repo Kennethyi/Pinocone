@@ -79,7 +79,7 @@
 
 
 
-<footer class="page-footer z-depth-3">
+<footer class="page-footer z-depth-3" style="position: absolute; bottom:0; width: 100%;">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
