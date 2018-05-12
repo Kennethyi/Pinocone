@@ -112,10 +112,13 @@
 		if (empty($password)) { array_push($errors, "Password is required"); }
         if (empty($phone_number)) { array_push($errors, "Phone Number is required"); }
 
-
-
+        // editprofile validation: check if username input already exists in database
+        $chkpname = "SELECT * FROM user WHERE username='$username'";
+       // 
+        $resultpname = mysqli_query($db, $chkpname);
+        
 		// register user if there are no errors in the form
-		if (count($errors) == 0) {
+		if (count($errors) == 0 && mysqli_num_rows($resultpname) == ($_SESSION['username'])) {
 			$password = md5($password);//encrypt the password before saving in the database
 			
             $update = "UPDATE user SET username = '$username', 
@@ -124,7 +127,7 @@
                 email = '$email', 
                 password='$password', 
                 phone_number='$phone_number', 
-                address= '$address' WHERE user_id = 1";
+                address= '$address'";
 			
             $result = mysqli_query($db, $update);
             if ($result) {
