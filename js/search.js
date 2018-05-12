@@ -20,9 +20,11 @@ app.controller("searchAppController", ['$scope', '$http', function ($scope, $htt
 	};
 	
 	$scope.delete = function(deletingId, index) {
+		var orderID = deletingId;
 		$http.get("../includes/delete_orders.php?id=" + deletingId)
 		.then(function successCallback(response) {
 			$scope.orders.splice(index, 1);
+			alert("Order " + orderID + " has sucessfully deleted from the database records!");
 		});
 	}
 }]);
