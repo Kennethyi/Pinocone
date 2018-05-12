@@ -15,6 +15,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home</title>
+		
+		<!-- Jquery -->
+		<script src="js/jquery.js"></script>
+		
 		<!-- Materialize CSS -->
 		<link rel="stylesheet" href="css/materialize.css">
 
@@ -46,58 +50,66 @@
 		
 		<img class="responsive-img" src="img/home-background.jpg">
 		
-		<div class="row container">
-			<div class="col s4">
+		<div class="row container center">
+			<h1 class="center">Our Catering Service Provides</h1>
+			<div class="col s4 features">
 				<p class="center-align advantages">Natural Ingredient</p>
 				<p class="center-align">Food made from natural ingredient. Ingredient that has little processing, flavoring, stabilizer and preservatives that keep food original nutrient.</p>
 			</div>
-			<div class="col s4">
+			<div class="col s4 features">
 				<p class="center-align advantages">Multiple choices</p>
 				<p class="center-align">Choose from multiple choices of food that suit you and your attendents taste. Liven up the festival abit.</p>
 			</div>
-			<div class="col s4">
+			<div class="col s4 features">
 				<p class="center-align advantages">Fast Delivery</p>
 				<p class="center-align">Fast delivery of food ensure that the food is warm and fresh upon arrival.</p>
 			</div>
 		</div>
 		
 		<div class="row container">
-			<div class="col s4">
-				<div class="card">
-					<div class="card-image">
-						<img src="img/chrissy_costanza.jpg">
-						<span class="card-title">Crissy Costanza</span>
-					</div>
-					<div class="card-content">
+			
+			<h1 class="center">Reviews from customers</h1>
+			<div style="position: relative; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+				<div class="col s3">
+					<div class="card-panel">
+						<div class="center">
+							<img class="circle center" src="img/chrissy_costanza.jpg" style="width:50%; height:50%;">
+							<h6 class="card-title">Crissy Costanza</h6>
+						</div>
 						<p>All of the food are fresh and delicious! All of my guest really loves the food here.</p>
 					</div>
 				</div>
-			</div>
-			
-			<div class="col s4">
-				<div class="card">
-					<div class="card-image">
-						<img src="img/anastasia_scheglova.jpg">
-						<span class="card-title">Anastasia Scheglova</span>
-					</div>
-					<div class="card-content">
+				
+				<div class="col s3">
+					<div class="card-panel">
+						<div class="center">
+							<img class="circle center" src="img/anastasia_scheglova.jpg" style="width:50%; height:50%;">
+							<h6 class="card-title">Anastasia Scheglova</h6>
+						</div>
 						<p>Offer multiple choices of good food which won't go unnoticed by the guests.</p>
 					</div>
 				</div>
-			</div>
-			
-			<div class="col s4">
-				<div class="card">
-					<div class="card-image">
-						<img src="img/susan_coffey.jpg">
-						<span class="card-title">Susan Coffey</span>
-					</div>
-					<div class="card-content">
+				
+				<div class="col s3">
+					<div class="card-panel">
+						<div class="center">
+							<img class="circle center" src="img/susan_coffey.jpg" style="width:50%; height:50%;">
+							<h6 class="card-title">Susan Coffey</h6>
+						</div>
 						<p>Good food with fast delivery time which ensure the food that came to your doorstep are piping hot!</p>
 					</div>
 				</div>
+				
+				<div class="col s3">
+					<div class="card-panel">
+						<div class="center">
+							<img class="circle center" src="img/charlize_theron.jpg" style="width:50%; height:50%;">
+							<h6 class="card-title">Charlize Theron</h6>
+						</div>
+						<p>Good food and good delivery service all around kuching area!</p>
+					</div>
+				</div>
 			</div>
-			
 		</div>
 		
 		<div class="row" id="secure_shopping">
