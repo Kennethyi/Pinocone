@@ -28,6 +28,28 @@
 		
 		<!-- AngularJS -->
 		<script src="js/angular.js"></script>
+	
+	 <style> 
+        body{ 
+            background-image: url(img/kontak.jpg);
+            
+        
+        
+        }
+        
+        body h1{
+            
+            color:white;
+        }
+        
+        
+        
+        .col s4{
+           color: white;
+        }
+    
+    </style>
+
 
 </head>
 <body>
@@ -49,19 +71,22 @@
 <p class="center-align advantages">Any enquiries? Ask us through the following methods!</p>
 
 <div class="col s4">
+							<div class="card-panel">
 				<p class="center-align advantages">1. Call Us!</p>
 				<p class="center-align">If you are more comfortable with making a phone call, we can be reach at +6082-343566.</p>
-			</div>
+			</div></div>
 
 			<div class="col s4">
+							<div class="card-panel">
 				<p class="center-align advantages">2. Email Us!</p>
 				<p class="center-align">Are you more comfortable in communicating using email? Then, email us at PinoCone_Cat@gmail.com</p>
-			</div>
+			</div></div>
 <div class="col s4">
+							<div class="card-panel">
 				<p class="center-align advantages">3. Chat With Us Through Facebook!</p>
 				<p class="center-align">Follow our page, Pinocone Catering Company to keep track of our updates  and chat with us. 
 </p>
-			</div>
+			</div></div>
 			
 			
 		</div>
