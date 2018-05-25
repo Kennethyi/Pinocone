@@ -28,6 +28,28 @@
 		
 		<!-- AngularJS -->
 		<script src="js/angular.js"></script>
+	
+	
+	<style> 
+        body{ 
+            background-image: url(img/kontak.jpg);
+            
+        
+        
+        }
+        
+        body h1{
+            
+            color:white;
+        }
+        
+        
+        
+        .col s4{
+           color: white;
+        }
+    
+    </style>
 		
 </head>
 <body>
@@ -45,21 +67,28 @@
 			</nav>
 		</header>
 <div class="row container">
-<h1>About Us, Pinocone Catering Company</h1>
+<h1 class="center-align">About Us</h1>
 
 			<div class="col s4">
+			   <div class="card-panel">
+							
 				<h3 class="center-align advantages">Background</h3>
 				<p class="center-align">Pinocone Catering Company started back in 2010. It was initially a home-based catering company manage by 2 housewives that receives catering order from friends and family. Today, Pinocone Catering has experience a growth in business and has served thousands of customers across Sarawak.</p>
-			</div>
+			   </div>
+							</div>
 <div class="col s4">
+							<div class="card-panel">
 				<h3 class="center-align advantages">Our Focus</h3>
 				<p class="center-align">For the past 8 years, we have been focusing on food delivery services for schools and various companies in Sarawak 
 </p>
 			</div>
+							</div>
 			<div class="col s4">
+							<div class="card-panel">
 				<h3 class="center-align advantages">Our Goals</h3>
 				<p class="center-align">We at Pinocone Catering Company aims to deliver outstanding service with a commitment to quality, safety and health whether in the workplace, school and colleges, hospitals, at leisure, on the move or in remote environment.</p>
 			</div>
+							</div>
 			
 		</div>
 		
