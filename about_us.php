@@ -32,7 +32,7 @@
 	
 	<style> 
         body{ 
-            background-image: url(img/kontak.jpg);
+            background-image: url(img/aboutus.jpg);
             
         
         
